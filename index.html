@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>goddless X 4nd0r3x</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*For MyLove</span><br />
+			<span class="space"/><span class="comments">*/taam kim o</span><br />
+			Hey  !<br />
+			Tanistigimiz ilk gunu hatirliyor musun?<br />
+			<span class="comments">// Gordugum an Vuruldugum. </span><br />
+			O gunden beri yanindan ayrilmak istemiyorum;<br />
+			<span class="comments">// Mizahin, Sevgin, Hareketlerin, paha bicilemez.</span><br />
+			Her seyini gordugum an sevdim;<br />
+			Zaman ilerledikce;<br />
+			Aramizda ki bag gittikce guclendi;<br />
+			Uzun sureli bir birlikteligin baslangiciydi belki;<br />
+			Birlikte cok uzun ve guzel vakit gecirdik ve bir an olsun aklimdan cikmadin;<br />
+			Tartistigimizda oldu ama hepsi bunun bir parcasi ;<br />
+			<span class="comments">// Ve eminim daha fazlasi olucak :D</span><br />
+			Ama bu bizi daha guclu bir hale getiricek;<br />
+			<br>
+			<br>
+			Tek soylemek istedigim:<br />
+			Senden hoslaniyorum ve bu gittikce artiyor;<br />
+			<br>
+			<br>
+			Simdi ne kadar guzel oldugumuzu gormek istiyorsan kalbe tikla<br />
+			<br>
+			<span id="heartspan">
+			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					FOREVER
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					SANA BAYILIYORUM<br/>
+					<div class="signature">- 4nd0r3x</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<audio id="bgm" src="music.mp3" loop></audio>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date(2025, 9, 18, 16, 30, 0, 0);
+var now = new Date();
+
+var diff = now - together; 
+var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+
+
+</script>
+</body>
+</html>
+<script>
+function startBgm() {
+    const bgm = document.getElementById("bgm");
+    bgm.volume = 0.4; // ses seviyesi
+    bgm.play().catch(() => {
+        // Otomatik çalma engellenirse
+        // sayfada ilk tıklamada başlatır
+        document.body.addEventListener("click", () => {
+            bgm.play();
+        }, { once: true });
+    });
+}
+
+startBgm();
+</script>
